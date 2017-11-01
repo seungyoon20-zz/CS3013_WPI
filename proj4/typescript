@@ -1,0 +1,100 @@
+Script started on Thu 12 Oct 2017 01:00:53 PM EDT
+bash-3.2$ make
+gcc proj4.c -o proj4 -lpthread
+bash-3.2$ ls -1d dir_a/*             
+dir_a/a.txt
+dir_a/b
+bash-3.2$ ls -1d dir_a/* | ./proj4         
+Number of bad files: 0
+Number of directories: 1
+Number of regular files: 1
+Number of sepcial files: 0
+Total number of bytes of regular files: 13
+Number of all-text files: 1
+total bytes of all-text files: 13
+--------------------------------------------
+CPU time used(user): 0.000000
+CPU time used(system): 0.000000
+Wall-clock time used: 0.737031
+bash-3.2$ ls -1d dir_a/* | ./proj4 thread 1
+Number of bad files: 0
+Number of directories: 1
+Number of regular files: 1
+Number of sepcial files: 0
+Total number of bytes of regular files: 13
+Number of all-text files: 1
+total bytes of all-text files: 13
+--------------------------------------------
+CPU time used(user): 0.000000
+CPU time used(system): 0.000000
+Wall-clock time used: 0.585932
+bash-3.2$ ls -1d dir_a/* | ./proj4 thread 2
+Number of bad files: 0
+Number of directories: 1
+Number of regular files: 1
+Number of sepcial files: 0
+Total number of bytes of regular files: 13
+Number of all-text files: 1
+total bytes of all-text files: 13
+--------------------------------------------
+CPU time used(user): 0.000000
+CPU time used(system): 0.000000
+Wall-clock time used: 0.737105
+bash-3.2$ ls -1d /etc/* | ./proj4 thread 2
+Number of bad files: 0
+Number of directories: 113
+Number of regular files: 168
+Number of sepcial files: 0
+Total number of bytes of regular files: 2982926
+Number of all-text files: 160
+total bytes of all-text files: 817694
+--------------------------------------------
+CPU time used(user): 660.041000
+CPU time used(system): 1980.123000
+Wall-clock time used: 2750.677973
+bash-3.2$ ls -1d /etc/* | ./proj4         
+Number of bad files: 0
+Number of directories: 113
+Number of regular files: 168
+Number of sepcial files: 0
+Total number of bytes of regular files: 2982926
+Number of all-text files: 160
+total bytes of all-text files: 817694
+--------------------------------------------
+CPU time used(user): 636.039000
+CPU time used(system): 1852.115000
+Wall-clock time used: 2523.777943
+bash-3.2$ ls -1d /etc/* | ./proj4 thread 15
+Number of bad files: 0
+Number of directories: 113
+Number of regular files: 168
+Number of sepcial files: 0
+Total number of bytes of regular files: 2982926
+Number of all-text files: 160
+total bytes of all-text files: 817694
+--------------------------------------------
+CPU time used(user): 716.044000
+CPU time used(system): 1908.119000
+Wall-clock time used: 2744.393000
+bash-3.2$ ls -1d /bin/* | ./proj4 thread 15
+Number of bad files: 0
+Number of directories: 0
+Number of regular files: 109
+Number of sepcial files: 0
+Total number of bytes of regular files: 13996663
+Number of all-text files: 4
+total bytes of all-text files: 5015
+--------------------------------------------
+CPU time used(user): 4.000000
+CPU time used(system): 0.000000
+Wall-clock time used: 13.772904
+bash-3.2$ ls -1d * | ./proj4 thread -1
+Please give integer no smaller than 1!
+bash-3.2$ ls -1d * | ./proj4 2
+Wrong arguments!
+bash-3.2$ make clean
+rm -f proj4
+bash-3.2$ exit
+exit
+
+Script done on Thu 12 Oct 2017 01:03:06 PM EDT

@@ -1,0 +1,88 @@
+bash-3.2$ ./doit wc makefile
+      17      85     504 makefile
+
+CPU time used(user): 1.766000
+CPU time used(system): 1.574000
+Wall-clock time used: 5.750115
+Involuntary: 7
+Voluntary: 0
+Number of major page fault: 0
+Number of minor page faults: 301
+
+
+bash-3.2$ ./doit
+Shell:==>ls
+Proj1			doit			week1-proc.pdf
+cpu-intro.pdf		fork17.pdf
+cpu-mechanisms.pdf	typescript
+
+CPU time used(user): 1.783000
+CPU time used(system): 1.213000
+Wall-clock time used: 4.752107
+Involuntary: 8
+Voluntary: 0
+Number of major page fault: 0
+Number of minor page faults: 282
+
+
+==>cd Proj1
+==>ls
+doit		doit.dSYM	testCases
+doit.c		makefile	typescript
+
+CPU time used(user): 3.552000
+CPU time used(system): 2.425000
+Wall-clock time used: 4.603918
+Involuntary: 12
+Voluntary: 0
+Number of major page fault: 0
+Number of minor page faults: 559
+
+
+==>set promt pt = $$$$$$$$$$$$
+$$$$$$$$$$$$ls
+doit		doit.c		doit.dSYM	makefile	typescript
+
+CPU time used(user): 1.794000
+CPU time used(system): 1.345000
+Wall-clock time used: 5.119059
+Involuntary: 6
+Voluntary: 0
+Number of major page fault: 0
+Number of minor page faults: 275
+
+
+$$$$$$$$$$$$ls &
+
+[1]ls	43118
+$$$$$$$$$$$$doit		doit.c		doit.dSYM	makefile	typescript
+jobs
+[1] 43118   ls
+$$$$$$$$$$$$wc makefile
+
+[1]	ls	43118	Completed
+CPU time used(user): 3.554000
+CPU time used(system): 2.524000
+Wall-clock time used: 17976.535883
+Involuntary: 11
+Voluntary: 0
+Number of major page fault: 0
+Number of minor page faults: 554
+
+
+      17      85     504 makefile
+
+CPU time used(user): 5.220000
+CPU time used(system): 3.761000
+Wall-clock time used: 4.578018
+Involuntary: 19
+Voluntary: 0
+Number of major page fault: 0
+Number of minor page faults: 831
+
+
+$$$$$$$$$$$$jobs
+$$$$$$$$$$$$exit
+quit the shell...
+
+bash-3.2$ exit 1

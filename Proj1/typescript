@@ -1,0 +1,135 @@
+Script started on Fri Sep  1 11:11:31 2017
+[?1034hbash-3.2$ make
+gcc -g -Wall doit.c -lm -o doit
+bash-3.2$ do[K[K./dot[Kit wc makefile
+      17      85     504 makefile
+
+CPU time used(user): 0.890000
+CPU time used(system): 0.786000
+Wall-clock time used: 4.711092
+Involuntary: 8
+Voluntary: 2
+Number of major page fault: 0
+Number of minor page faults: 303
+
+
+bash-3.2$ ./doit
+Shell:==>ls
+doit		doit.dSYM	testCases
+doit.c		makefile	typescript
+
+CPU time used(user): 1.517000
+CPU time used(system): 1.120000
+Wall-clock time used: 4.609969
+Involuntary: 13
+Voluntary: 0
+Number of major page fault: 0
+Number of minor page faults: 307
+
+
+==>cat makefile
+# Make file for doit
+# WRITTEN BY: Yixue Wang
+# This makefile is used as follows to regenerate files for the life program:
+#   make Board.o   --  Regenerates Board.o by compiling
+#   make Game.o   --  Regenerates Game.o by compiling
+#   make Life.o   --  Regenerates Life.o by compiling
+#   make life    --  Regenerates the executable life file by compiling
+#   make              --  Same as "make Life”
+#
+
+CFLAGS = -g
+
+doit: doit.c
+	gcc $(CFLAGS) -Wall doit.c -lm -o doit
+clean:
+	rm -f doit
+all: doit
+
+CPU time used(user): 1.151000
+CPU time used(system): 1.003000
+Wall-clock time used: 3.994967
+Involuntary: 19
+Voluntary: 0
+Number of major page fault: 0
+Number of minor page faults: 274
+
+
+==>cd  cd ..
+==>ls
+Proj1			cpu-mechanisms.pdf	typescript
+Proj1.zip		doit			week1-proc.pdf
+cpu-intro.pdf		fork17.pdf
+
+CPU time used(user): 0.794000
+CPU time used(system): 0.560000
+Wall-clock time used: 2.363027
+Involuntary: 21
+Voluntary: 0
+Number of major page fault: 0
+Number of minor page faults: 274
+
+
+==>cd Proj1
+==>ls
+doit		doit.dSYM	testCases
+doit.c		makefile	typescript
+
+CPU time used(user): 1.509000
+CPU time used(system): 1.191000
+Wall-clock time used: 4.216033
+Involuntary: 29
+Voluntary: 0
+Number of major page fault: 0
+Number of minor page faults: 276
+
+
+==>set prompt = @@@
+@@@wc makefile &
+
+[1]wc	44779
+      17      85     504 makefile
+jobs
+[1] 44779   wc
+ls
+
+[1]	wc	44779	Completed
+CPU time used(user): 1.420000
+CPU time used(system): 1.042000
+Wall-clock time used: 19695.377000
+Involuntary: 35
+Voluntary: 0
+Number of major page fault: 0
+Number of minor page faults: 281
+
+
+doit		doit.dSYM	testCases
+doit.c		makefile	typescript
+
+CPU time used(user): 1.051000
+CPU time used(system): 0.784000
+Wall-clock time used: 3.020898
+Involuntary: 40
+Voluntary: 0
+Number of major page fault: 0
+Number of minor page faults: 279
+
+
+ls
+doit		doit.dSYM	testCases
+doit.c		makefile	typescript
+
+CPU time used(user): 1.527000
+CPU time used(system): 1.110000
+Wall-clock time used: 3.924934
+Involuntary: 44
+Voluntary: 0
+Number of major page fault: 0
+Number of minor page faults: 279
+
+
+^C
+bash-3.2$ exit 1
+exit
+
+Script done on Fri Sep  1 11:14:29 2017

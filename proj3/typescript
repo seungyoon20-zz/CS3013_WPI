@@ -1,0 +1,51 @@
+Script started on Thu 28 Sep 2017 06:06:21 PM EDT
+bash-3.2$ make
+gcc -pthread -Wall main.c -lm -o mailbox 
+bash-3.2$ ./mailbox
+Give at least 2 arguments
+bash-3.2$ ./mailbox 4
+3 1
+4 2
+-3 1
+Please give positive value!
+0 1
+6 1
+5 1
+7 3
+9 2
+1
+The result from thread 1 is 14 from 4 operations during 14 seconds
+The result from thread 3 is 7 from 1 operations during 14 seconds
+The result from thread 4 is 0 from 0 operations during 14 seconds
+The result from thread 2 is 13 from 2 operations during 15 seconds
+bash-3.2$ ./mailbox 4  
+3 6
+Wrong mailbox number!
+3 7
+Wrong mailbox number!
+3 5
+Wrong mailbox number!
+1
+The result from thread 1 is 0 from 0 operations during 10 seconds
+The result from thread 3 is 0 from 0 operations during 10 seconds
+The result from thread 4 is 0 from 0 operations during 10 seconds
+The result from thread 2 is 0 from 0 operations during 10 seconds
+bash-3.2$ ./mailbox 4 nb
+In NB mode...
+3 1
+4 2
+6 1
+5 1
+7 3
+9 2
+t
+The result from thread 1 is 14 from 3 operations during 15 seconds
+The result from thread 2 is 13 from 2 operations during 15 seconds
+The result from thread 3 is 7 from 1 operations during 15 seconds
+The result from thread 4 is 0 from 0 operations during 15 seconds
+-bash-3.2$ make clean
+rm -f mailbox
+bash-3.2$ exit
+exit
+
+Script done on Thu 28 Sep 2017 06:10:28 PM EDT

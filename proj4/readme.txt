@@ -1,0 +1,2 @@
+-type in "make" in cmdline to compile
+-use "ls -1d /@@@/* | ./proj4 (thread #)" to test proj4
